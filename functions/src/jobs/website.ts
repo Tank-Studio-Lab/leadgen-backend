@@ -1,5 +1,8 @@
 import * as functions from "firebase-functions";
-import { checkWebsiteUpController } from "../controllers/website";
+import {
+  checkWebsiteUpController,
+  // getSslDetailsController,
+} from "../controllers/website";
 const timeZone = "America/Mexico_City";
 
 export const checkWebsitesUpjob = functions.pubsub
@@ -12,3 +15,14 @@ export const checkWebsitesUpjob = functions.pubsub
       console.log(error);
     }
   });
+/*
+export const checkWebsiteSSlJob = functions.pubsub
+  .schedule("55 23 * * *")
+  .timeZone(timeZone)
+  .onRun(async (context) => {
+    try {
+      await getSslDetailsController();
+    } catch (error) {
+      console.log(error);
+    }
+  });*/

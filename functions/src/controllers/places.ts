@@ -10,7 +10,11 @@ export const addWebsiteToCollection = async (place: Place, context: any) => {
       console.log("No website");
       return;
     }
-    if (socialMedias.some((v) => place.website.includes(v))) {
+    if (
+      socialMedias.some((v) =>
+        place.website.toLowerCase().includes(v.toLowerCase())
+      )
+    ) {
       isSocialMedia = true;
     }
     console.log(isSocialMedia);
