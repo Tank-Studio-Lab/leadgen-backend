@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "tank-studio-leads",
+    "dev": "leadgen-5d2d7"
+  },
+  "targets": {}
+}
